@@ -1,0 +1,105 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: linear-gradient(180deg, rgba(5, 12, 7, 0.95) 0%, rgba(5, 12, 7, 0.6) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(57, 255, 122, 0.08);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e4d1e, #2d7a2d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 16px rgba(57, 255, 122, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: logo-pulse 4s ease-in-out infinite;
+}
+
+.logo-leaf {
+    color: #39ff7a;
+}
+
+@keyframes logo-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 16px rgba(57, 255, 122, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 28px rgba(57, 255, 122, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+}
+
+.logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #a0e8a0, #39ff7a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgba(160, 200, 170, 0.7);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #39ff7a;
+}
+
+.nav-divider {
+    color: rgba(57, 255, 122, 0.2);
+}
+
+.nav-tagline {
+    font-size: 0.78rem;
+    color: rgba(160, 200, 170, 0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+
+    .nav-tagline,
+    .nav-divider {
+        display: none;
+    }
+}
